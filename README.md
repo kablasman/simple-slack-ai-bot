@@ -2,8 +2,6 @@
 
 A straight forward bot that listens for direct messages and replies with AI-generated responses. Designed to be easy to understand and friendly to chat with.
 
----
-
 ## ✨ Features
 
 * 💬 Responds to direct messages in Slack
@@ -12,15 +10,11 @@ A straight forward bot that listens for direct messages and replies with AI-gene
 * ⚡️ Built with Bolt for simplicity
 * 🔒 Uses Slack’s Events API and built-in request verification
 
----
-
 ## ⚙️ Tech Stack
 
 * **Bolt for JavaScript**
 * **Slack Web API**
 * **OpenAI**
-
----
 
 ## 🚀 Getting Started
 
@@ -31,15 +25,11 @@ git clone https://github.com/your-org/simple-ai-slack-bot.git
 cd simple-ai-slack-bot
 ```
 
----
-
 ### 2. Install dependencies
 
 ```bash
 npm install
 ```
-
----
 
 ### 3. Create a Slack app
 
@@ -55,8 +45,6 @@ npm install
    * `reactions:write`
    * `im:history`
 
----
-
 ### 4. Configure environment variables
 
 Create a `.env` file:
@@ -67,8 +55,6 @@ SLACK_SIGNING_SECRET=...
 AI_API_KEY=...
 ```
 
----
-
 ### 5. Run the bot
 
 ```bash
@@ -76,8 +62,6 @@ npm run start
 ```
 
 Install the bot to Slack and send it a direct message to try it out!
-
----
 
 ## ℹ️ How It Works
 
@@ -87,8 +71,6 @@ Install the bot to Slack and send it a direct message to try it out!
 4. The AI-generated response is posted back to Slack
 5. The 👀 reaction is removed
 
----
-
 ## ✏️ Example Flow
 
 ```text
@@ -96,8 +78,6 @@ User: What’s the weather in Toronto Ontario?
 Bot: 👀
 Bot: Cold as heck.
 ```
-
----
 
 Happy chatting! 🤖
 
