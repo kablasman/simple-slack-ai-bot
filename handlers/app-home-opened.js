@@ -13,7 +13,7 @@ module.exports = (async({event, client}) => {
     
     await client.chat.postMessage ({
         channel: userID,
-        text: "hey!"
+        text: ":wave: Welcome to the the finest AI bot you've ever seen! I can answer all types of questions for you right here in Slack! Ask away..."
     });
 
     whoIsThis.add(userID);
