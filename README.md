@@ -75,8 +75,6 @@ Install the bot to Slack and send it a direct message to try it out!
 ```text
 User: What’s the weather in Toronto, Ontario?
 Bot: 👀
-Bot: Cold as heck.
+Bot: Cold as heck. Better wear a jacket!
 ```
-
-Happy chatting! 🤖
 
