@@ -1,4 +1,8 @@
 const generateResponse = require("../ai/llm");
+const { WebClient } = require('@slack/web-api');
+
+const token = process.env.SLACK_BOT_TOKEN;
+const web = new WebClient(token);
 
 module.exports = (async({message,say}) => {
     console.log("Message received!", message);
@@ -9,12 +13,26 @@ module.exports = (async({message,say}) => {
 
     try {
         const userQuestion = message.text;
+        
+        // adding reaction
+        await web.reactions.add({
+            channel: message.channel,
+            name: "eyes",
+            timestamp: message.ts
+        });
+
         const aiResponse = await generateResponse(userQuestion);
         const text = (aiResponse && typeof aiResponse === "string" && aiResponse.trim()) 
             ? aiResponse.trim() 
             : "I don't have an answer for you!";
         
-            await say(text);
+        await say(text);
+
+        await web.reactions.remove ({
+            channel: message.channel,
+            name: "eyes",
+            timestamp: message.ts
+        })
 
       /*if (!text) {
             console.error("Invalid AI response:", aiResponse);

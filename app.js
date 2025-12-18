@@ -1,4 +1,4 @@
-require('dotenv').config()
+require('dotenv').config();
 const { App } = require("@slack/bolt");
 const messageHandler = require("./handlers/message");
 const welcomeMessage = require("./handlers/app-home-opened");
