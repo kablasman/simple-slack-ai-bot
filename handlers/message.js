@@ -25,14 +25,14 @@ module.exports = (async({message,say}) => {
         const text = (aiResponse && typeof aiResponse === "string" && aiResponse.trim()) 
             ? aiResponse.trim() 
             : "I don't have an answer for you!";
-        
-        await say(text);
 
         await web.reactions.remove ({
             channel: message.channel,
             name: "eyes",
             timestamp: message.ts
         })
+
+        await say(text);
 
       /*if (!text) {
             console.error("Invalid AI response:", aiResponse);
