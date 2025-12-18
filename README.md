@@ -8,7 +8,6 @@ A straight forward bot that listens for direct messages and replies with AI-gene
 * 👀 Reacts with a temporary "thinking" emoji while generating a response
 * 🧠 Uses OpenAI LLM to generate responses
 * ⚡️ Built with Bolt for simplicity
-* 🔒 Uses Slack’s Events API and built-in request verification
 
 ## ⚙️ Tech Stack
 
@@ -51,8 +50,8 @@ Create a `.env` file:
 
 ```env
 SLACK_BOT_TOKEN=xoxb-...
-SLACK_SIGNING_SECRET=...
-AI_API_KEY=...
+SLACK_APP_TOKEN=...
+OPENAI_API_KEY=...
 ```
 
 ### 5. Run the bot
@@ -74,7 +73,7 @@ Install the bot to Slack and send it a direct message to try it out!
 ## ✏️ Example Flow
 
 ```text
-User: What’s the weather in Toronto Ontario?
+User: What’s the weather in Toronto, Ontario?
 Bot: 👀
 Bot: Cold as heck.
 ```
